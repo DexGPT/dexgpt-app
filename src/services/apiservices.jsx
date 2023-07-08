@@ -1,4 +1,4 @@
-class API {
+export class API {
     constructor(baseUrl) {
       this.baseUrl = baseUrl;
     }
@@ -43,8 +43,4 @@ class API {
       }
       
     }
-}
-
-module.exports = {
-    API
 }
