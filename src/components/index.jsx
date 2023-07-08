@@ -39,29 +39,35 @@ export default function MainApp() {
     }   
 
     if (state === 0) {
-        init();        
+        init();     
     }
 
     if (prompts === null) {
-        getAllPrompts();
+        getAllPrompts();  
     }
 
     const submitKey = async(key) => {
+        setloading(true);
         await dex.setup(key)
         setOpen(false);
+        setloading(false);
     }
 
     const askQuery = async(query) => {
+        setloading(true);
         let response = await dex.ask_query(query)
         setResp(response)
+        setloading(false);
     }
 
     const changePrompt = async(prompt) => {
+        setloading(true);
         if (prompt === "custom") {
             setCustomPromptStatus(true);
         } else {
             await dex.change_prompt(prompt)
         }
+        setloading(false);
         
     }
 
