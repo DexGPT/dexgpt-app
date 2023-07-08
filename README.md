@@ -6,8 +6,8 @@ The final version of DexGPT.app will be able to collect information from multipl
 
 The aim of DexGPT.app is to create a powerful AI Assistant which anyone could use it as their Personal Assistant. The personal Assistant will have option to add Multiple prompt with multiple tool.
 
-- [Read about prompts]()
-- [Read about tools]()
+- [Read about prompts](https://docs.langchain.com/docs/components/prompts/)
+- [Read about tools](https://python.langchain.com/docs/modules/agents/tools/integrations/apify)
 
 # Build
 
