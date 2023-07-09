@@ -35,7 +35,8 @@ export class DexInstance {
             instance_id: this.instance_id,
             query: query
         })
-        return resp.payload;
+        console.log(resp);
+        return resp;
     }
 
     async change_prompt(prompt_id) {

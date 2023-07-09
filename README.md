@@ -21,13 +21,41 @@ The aim of DexGPT.app is to create a powerful AI Assistant which anyone could us
 
 https://dexgpt.app
 
+### Create instance using Open AI Key
+
+Initlise Dexter with Open AI key
+
+![Step1](projectimage/Step1.png)
+
+### Start asking question from Dexter 
+
+Once instance is initlised, you can start asking query from dexter
+
+![Step1](projectimage/Step2.png)
+
+### Create instance using Open AI Key
+
+Change how dexter should behave by changing prompt for dexter model. Select from a list of avalible prompts.
+
+![Step1](projectimage/Step3.png)
+
+### Create instance using Open AI Key
+
+You can also write your own custom prompt for your Assistant.
+
+![Step1](projectimage/Step4.png)
+
 # Product Roadmap
 
-- **Release 1.0.0** : First version with options to create a Dexter AI instance with conversational memory and Prompting, User does get the option to change prompt or create their own. **( 1 week of july 2023 )** - `Launched`
+- **Release 0.1.0** : First version with options to create a Dexter AI instance with conversational memory and Prompting, User does get the option to change prompt or create their own. **( By end of july )** - `In Progress`
 
-- **Release 1.1.0** : All options from release 1.0.0 with options to attach Tools to a Prompts. User will have to provide keys for the tools, each propmpt will come with prompt messages, and tools. **( 1 week of August 2023 )** - `In Progress`
+- **Release 0.2.0** : Add Options to attach AI Tools with prompts
 
-- **Release 1.2.0** : All options from release 1.1.0 with options to attach multiple prompts in a way the prompt 1 result with then be process by prompt 2 and so on. **(3rd week of august 2023 )**  - `Yet to start`
+- **Release 0.3.0** : Add Options to attach multiple prompts.
 
-- **Release 1.3.0** : Add Zapier for trigger or periodic events. **(2nd week of September 2023 )** - `Yet to start`
+- **Release 0.4.0** : User can create their private collection of Prompts. 
+
+- **Release 0.5.0** : User can create a collection with multiple prompts and tools and can public for public usage.
+
+
 

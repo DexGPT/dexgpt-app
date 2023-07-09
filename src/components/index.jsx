@@ -1,5 +1,6 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -11,6 +12,8 @@ import { API } from '../services/apiservices';
 import { DexInstance } from '../services/dexter';
 import Response from './response';
 import CustomPrompt from './custom_prompt';
+import CardGallery from './promptgallery/prompts';
+import PromptGallery from './promptgallery';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
@@ -25,7 +28,10 @@ export default function MainApp() {
     const [loadingmsg, setLoadingMsg] = React.useState("Loading ....");
 
     const [prompts, setPrompts] = React.useState(null);
+    const [promptName, setPromptName] = React.useState("Basic Prompt");
     const [resp, setResp] = React.useState("")
+    const [promptGalleryStatus, setPromptGalleryStatus] = React.useState(false)
+    
 
     const getAllPrompts = async () => {
         let response = await dex.get_all_prompts();
@@ -55,20 +61,35 @@ export default function MainApp() {
 
     const askQuery = async(query) => {
         setloading(true);
-        let response = await dex.ask_query(query)
-        setResp(response)
-        setloading(false);
+        try {
+            let response = await dex.ask_query(query)
+            console.log("Response", response, response?.payload, response?.message);
+            if (response?.payload) {
+                if (response?.payload === false) {
+                    alert("Something went wrong, creating environment.")
+                } else {
+                    setResp(response?.payload)
+                }
+                
+            } else {
+                console.error(response.message);            
+            }
+            setloading(false);
+        } catch(e) {
+            setloading(false);
+        }
     }
 
-    const changePrompt = async(prompt) => {
+    const changePrompt = async(selectedprompt, name) => {
         setloading(true);
-        if (prompt === "custom") {
+        if (selectedprompt === "custom") {
             setCustomPromptStatus(true);
         } else {
-            await dex.change_prompt(prompt)
+            await dex.change_prompt(selectedprompt)
         }
+        setPromptGalleryStatus(false);
         setloading(false);
-        
+        setPromptName(name);
     }
 
     const reset = async(reset) => {
@@ -78,12 +99,29 @@ export default function MainApp() {
     const changePromptText = async(text) => {
         await dex.change_prompt_text(text)
         setCustomPromptStatus(false);
+        setPromptName("User Defined prompt");
+    }
+
+    const onClose = () => {
+        console.log("Close Prompt")
+        setPromptGalleryStatus(false)
+    }
+
+    const useCustomPrompt = async () => {
+        setPromptGalleryStatus(false)
+        setCustomPromptStatus(true);
+    }
+
+    const openPromptGallery = async() => {
+        setPromptGalleryStatus(true)
     }
 
 
     console.log(prompts);
     return (
         <ThemeProvider theme={defaultTheme}>
+            <PromptGallery prompts={prompts} useCustomPrompt={useCustomPrompt} changePrompt={changePrompt} open={promptGalleryStatus}></PromptGallery>            
+            <ToastContainer />
             <div className={loading ? 'loadingbox': 'loadingbox hidden'}>
                 {loadingmsg}
             </div>
@@ -92,11 +130,9 @@ export default function MainApp() {
             { <CustomPrompt  open={customPromptStatus} onSubmit={changePromptText}></CustomPrompt> }
             <CssBaseline />
             {/* Top Navbar for the website */}
-            <Navbar prompts={prompts} changePrompt={changePrompt}></Navbar>
+            <Navbar openPromptGallery={openPromptGallery}></Navbar>
                     
-            {/* Interface to ask query*/}
-            { resp === "" && <QueryBox askQuery={askQuery} resp={resp}></QueryBox> }
-            { resp !== "" && <Response reset={reset} resp={resp} ></Response> }
+            <QueryBox promptName={promptName} askQuery={askQuery} response={resp}></QueryBox>
             
             
             {/* Website footer */}

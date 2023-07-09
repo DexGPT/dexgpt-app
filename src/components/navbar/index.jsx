@@ -6,37 +6,17 @@ import './index.css'
 import { Button, MenuItem, Select } from '@mui/material';
 
 export default function Navbar(props) {
-  const { changePrompt, prompts } = props
-  const [prompt, setPrompt] = React.useState(1);
-  const arr = []
-  const handlePromptChange = (event) => {     
-      setPrompt(event.target.value);
-      changePrompt(event.target.value)
-  };
-
+  const { openPromptGallery } = props
 
   return (
     <AppBar position="relative" style={{background: '#4B91F1!important'}}>
       <Toolbar>
         <Typography className="appname" variant="h6" color="inherit" noWrap>
-          <img src="logo-no-background.png" style={{height: "35px"}}/>
+          <img src="logo.png" style={{height: "55px", marginTop: "10px"}}/>
         </Typography>
 
-        <div className='actions'>
-            <span>Select Prompt </span>
-            <Select
-                className="selection prompt"
-                value={prompt}
-                onChange={handlePromptChange}>                  
-                  {                    
-                    prompts != null && prompts.map((prompt) => {
-                      return (
-                        <MenuItem value={prompt.id} key={prompt.id}>{prompt.prompt_name}</MenuItem>
-                      )
-                    })
-                  }
-                  <MenuItem value={'custom'} key={'custom'}>Custom Prompt</MenuItem>
-            </Select>
+        <div className='actions'>                 
+          <Button color={"success"} className='querybtn' variant="contained" onClick={openPromptGallery}>Change Prompt</Button>   
         </div> 
       </Toolbar>
     </AppBar>

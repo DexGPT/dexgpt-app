@@ -13,8 +13,18 @@
     text-align: center;  
   }
   
-  .querybox .subheading {
+  .querybox .slogan {
     text-align: center;  
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+  }
+
+  .querybox .footer {
+    text-align: center;  
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 30px;
   }
   
   .querybox .querytextbox {
@@ -23,14 +33,33 @@
     font-weight: 900;
     padding: 10px 20px;
     width: 100%;
+    border: none!important;
+    resize: none;
     /* margin-bottom: 60px; */
   }
+
+textarea:focus {
+    outline: none;
+}
   
   .querybox .querybtn {
-    margin: 20px;
+    /* margin: 20px; */
     /* width: 160px; */
     font-size: 18px;
-    padding: 10px;
+    /* padding: 10px; */
+    border: none;
+    background: rgba(0,0,0,0)!important;
+    cursor: pointer;
+  }
+
+  .querybox .querybtn:hover{
+    background: rgba(0,0,0,0.1)!important;
+  }
+
+  .responseholder {
+    background-color: #f8f9fa!important;
+    padding: 20px;
+    margin-bottom: 30px;
   }
 
   .response {
@@ -74,3 +103,7 @@
 .hidden {
   display: none;
 }  
+
+.query-text-area {
+  border: 1px solid gainsboro;
+}
