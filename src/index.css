@@ -4,15 +4,9 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
-  background-color: #f8f9fa;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.plusicon {
-  font-size: 100px!important;
-  line-height: 100px;
-  color: green;
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
