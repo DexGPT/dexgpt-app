@@ -57,5 +57,15 @@ You can also write your own custom prompt for your Assistant.
 
 - **Release 0.5.0** : User can create a collection with multiple prompts and tools and can public for public usage.
 
+- **Release 0.6.0** : User can add resources link for your assistant for accurate asnwer.
+
+- **Release 0.7.0** : Add Database as resource to your AI Assistant.
+
+- **Release 0.8.0** : Add Google Doc as Resource to your AI Assistant.
+
+- **Release 0.9.0** : Add Google Sheet as Resource your AI Assistance.
+
+- **Release 1.0.0** : Add Google Drive as Resource your AI Assistant.
+
 
 
