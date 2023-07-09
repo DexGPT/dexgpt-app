@@ -27,19 +27,19 @@ Initlise Dexter with Open AI key
 
 ![Step1](projectimage/Step1.png)
 
-### Start asking question from Dexter 
+### Start talking to Dexter
 
 Once instance is initlised, you can start asking query from dexter
 
 ![Step1](projectimage/Step2.png)
 
-### Create instance using Open AI Key
+### Change how dexter should behave.
 
 Change how dexter should behave by changing prompt for dexter model. Select from a list of avalible prompts.
 
 ![Step1](projectimage/Step3.png)
 
-### Create instance using Open AI Key
+### Write custom prompt for your assistant.
 
 You can also write your own custom prompt for your Assistant.
 
