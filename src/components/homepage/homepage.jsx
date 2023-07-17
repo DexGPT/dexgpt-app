@@ -22,7 +22,7 @@ export function HomePage(props) {
             <h1 className='heading'>Dex GPT</h1>
             <h5 className='subheading'>Your Custom AI Assistant!</h5>
             <p className='description'>
-                DexGPT employs Python's Langchain to craft an AI chatbot, leveraging OpenAI's model for user-customizable prompts. This AI assistant is designed for versatility, collecting data from diverse sources, processing it, and accomplishing tasks like generating reports, providing a personalized AI experience.
+                DexGPT utilizes Python's Langchain to develop an AI chatbot, leveraging OpenAI's model for customizable user prompts. This AI assistant is designed for versatility, gathering data from a variety of sources, processing it, and carrying out tasks such as generating reports and providing a personalized AI experience.
                 <br/><br/><br/>
                 Lets start by setting up Base LLM Model. Currently we are using Open AI ChatGPT 3.5 as base Model. Input you open AI key to get started.
                 <br/><br/>
