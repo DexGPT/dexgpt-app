@@ -11,8 +11,9 @@ export default function Navbar(props) {
   return (
     <AppBar position="relative" style={{background: '#4B91F1!important'}}>
       <Toolbar>
-        <Typography className="appname" variant="h6" color="inherit" noWrap>
-          <img src="logo.png" style={{height: "55px", marginTop: "10px"}}/>
+        <Typography className="appname" variant="h4" color="inherit" noWrap>
+          {/* <img src="logo.png" style={{height: "55px", marginTop: "10px"}}/> */}
+          DexGPT
         </Typography>
 
         <div className='actions'>                 

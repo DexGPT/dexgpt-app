@@ -1,11 +1,9 @@
-import Album from './components';
-import './App.css';
+import React from 'react';
+import DexApp from './components';
 
 function App() {
   return (
-    <div className="App">
-      <Album></Album>
-    </div>
+    <DexApp />
   );
 }
 
