@@ -1,10 +1,6 @@
 # DexGPT.app
 
-DexGPT.app is a powerful AI assistant with custom propmpting options. DexGPT.app works on [Dexter API's](https://dexgpt.gitbook.io/dexgpt-apis/).
-
-The final version of DexGPT.app will be able to collect information from multiple provided source ( could be website or slack or gmail ), process the information and take action.
-
-The aim of DexGPT.app is to create a powerful AI Assistant which anyone could use it as their Personal Assistant. The personal Assistant will have option to add Multiple prompt with multiple tool.
+DexGPT democratizes the power of AI by allowing individuals to create personalized digital assistants without the need for coding. Users can customize OpenAI's language model with unique prompts to shape its behavior, creating a truly personalized AI companion. The simple, intuitive interface streamlines the customization process, allowing every user to build an AI assistant tailored to their specific needs. With a commitment to privacy, security, and ethical AI practices, DexGPT brings the future of digital assistance to the present. Embrace the power of personalized AI with DexGPT.
 
 - [Read about prompts](https://docs.langchain.com/docs/components/prompts/)
 - [Read about tools](https://python.langchain.com/docs/modules/agents/tools/integrations/apify)
